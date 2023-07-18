@@ -1,5 +1,13 @@
+import Navbar from "./components/Navbar";
+import hero from "./assets/test.jpeg";
+
 function App() {
-	return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+	return (
+		<div className="relative">
+			<Navbar />
+			<img className="w-full h-screen object-cover" src={hero} alt="hero" />
+		</div>
+	);
 }
 
 export default App;
