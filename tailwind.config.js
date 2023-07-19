@@ -15,6 +15,9 @@ export default {
 				lightSilver: "#D3D3D3", // Accent color for borders, dividing sections, or subtle highlights
 				darkCharocoal: "#333333", // headings, titles, or important information, providing a strong contrast against lighter backgrounds.
 			},
+			backgroundImage: {
+				"hero-image": "url('/src/assets/test.jpeg')",
+			},
 		},
 	},
 	plugins: [],

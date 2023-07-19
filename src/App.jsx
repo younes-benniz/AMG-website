@@ -1,11 +1,11 @@
 import Navbar from "./components/Navbar";
-import hero from "./assets/test.jpeg";
+import Hero from "./components/Hero";
 
 function App() {
 	return (
 		<div className="relative">
 			<Navbar />
-			<img className="w-full h-screen object-cover" src={hero} alt="hero" />
+			<Hero />
 		</div>
 	);
 }

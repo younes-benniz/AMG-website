@@ -8,12 +8,12 @@ function Navbar() {
 
 	const [menuVisible, setMenuVisible] = useState(false);
 	return (
-		<div className="lg:absolute lg:w-3/4 h-16 lg:top-5 left-1/2 container mx-auto w-full lg:-translate-x-2/4 lg:px-8 lg:rounded-full px-4 bg-white flex items-center lg:justify-between gap-2">
+		<div className="lg:absolute lg:w-3/4 h-16 lg:top-5 left-1/2 container mx-auto w-full lg:-translate-x-2/4 lg:px-8 lg:rounded-full px-4 bg-white flex items-center lg:justify-between gap-2 z-50">
 			<div className="flex items-center justify-between w-full">
 				<Logo />
 				<nav className="lg:block lg:items-center lg:w-[32rem]" aria-label="mainNav">
 					<ul
-						className={`lg:flex px-14 justify-between lg:gap-6 text-lg lg:relative lg:flex-row ${
+						className={`lg:flex px-14 justify-between lg:gap-6 text-lg lg:relative lg:flex-row z-20 ${
 							menuVisible
 								? "flex flex-col absolute inset-x-0 pl-10 gap-4 top-16 w-screen h-1/3 py-10 bg-white"
 								: "hidden"
