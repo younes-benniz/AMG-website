@@ -9,13 +9,11 @@ function Hero() {
 						initial={{ opacity: 0, y: -20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 1 }}
-						className="text-3xl font-black leading-none text-white uppercase font-header sm:text-6xl pb-4 sm:text-left text-center">
+						className="text-3xl font-black leading-none text-white uppercase font-header sm:text-5xl pb-4 sm:text-left text-center">
 						Unleash Adrenaline
 						{/* Uncover the Intensity of AMG Performance */}
 					</motion.h1>
-
-					{/*  Uncover the Intensity of AMG Performance */}
-					<p className="text-sm text-white sm:text-xl font-semibold sm:w-4/5 sm:text-left text-center font-body">
+					<p className="text-sm text-white sm:text-xl font-semibold sm:w-4/5 sm:text-left text-center font-body leading-loose tracking-wider">
 						Experience the Thrill of Precision Engineering and Unrivaled Speed as AMG
 						Cars Redefine Automotive Performance.
 					</p>
