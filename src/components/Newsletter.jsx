@@ -3,10 +3,10 @@ function Newsletter() {
 		<section className="bg-lightSilver">
 			<div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
 				<div className="mx-auto max-w-screen-md sm:text-center">
-					<h2 className="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl ">
-						AMG Accelerate Newsletter
+					<h2 className="font-header mb-4 text-3xl tracking-wider font-medium text-gray-900 sm:text-4xl ">
+						UPDATES FROM AMG
 					</h2>
-					<p className="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-xl ">
+					<p className="font-body mx-auto max-w-2xl font-light text-gray-900 md:mb-8 sm:text-xl ">
 						Unleash the speed and luxury of AMG with our Accelerate Newsletter - your
 						ultimate source for high-performance automotive updates and insider
 						exclusives.
@@ -30,11 +30,11 @@ function Newsletter() {
 									</svg>
 								</div>
 								<input
-									className="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500"
+									className="font-body block p-3 pl-10 w-full text-base text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500"
 									placeholder="Enter your email"
 									type="email"
 									id="email"
-									required=""
+									required={true}
 								/>
 							</div>
 							<div>
@@ -45,7 +45,7 @@ function Newsletter() {
 								</button>
 							</div>
 						</div>
-						<div className="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer">
+						<div className="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer font-body pl-4">
 							We care about the protection of your data.
 							<a
 								href="#"
