@@ -9,8 +9,8 @@ function News() {
 	return (
 		<section className="container mx-auto py-10">
 			<h1 className="text-5xl font-header tracking-wide text-black mb-6">News</h1>
-			<div className="flex gap-5 pb-10">
-				<img src={coffe} alt="..." />
+			<div className="flex flex-wrap gap-5 pb-10">
+				<img src={coffe} className="h-auto max-w-full" alt="..." />
 				<div className="flex flex-col">
 					<span className="text-base font-body font-tight mb-3 tracking-wider leading-relaxed">
 						Top News

@@ -6,10 +6,10 @@ function Navbar() {
 	const menu = ["home", "services", "Vehicles", "FAQ", "contact"];
 
 	const [menuVisible, setMenuVisible] = useState(false);
-	const [stickyClass, setStickyClass] = useState("sm:absolute");
+	const [stickyClass, setStickyClass] = useState("absolute");
 
 	const stickNavbar = () => {
-		window.scrollY > 500 ? setStickyClass("fixed sm:top-2") : setStickyClass("absolute");
+		window.scrollY > 500 ? setStickyClass("fixed top-0") : setStickyClass("absolute");
 	};
 
 	useEffect(() => {
@@ -18,17 +18,17 @@ function Navbar() {
 		return () => {
 			window.removeEventListener("scroll", stickNavbar);
 		};
-	});
+	}, []);
 
 	return (
 		<div
-			className={`sm:w-3/4 h-16 left-1/2 container mx-auto w-full sm:-translate-x-2/4 sm:px-8 sm:rounded-full px-4 bg-white flex items-center sm:justify-between gap-2 z-50 ${stickyClass} top-5`}>
+			className={`w-full flex items-center h-16 sm:left-1/2 sm:w-3/4 sm:-translate-x-2/4 sm:px-8 sm:rounded-full sm:top-2 sm:justify-between gap-2 px-4 bg-white z-50 ${stickyClass}`}>
 			<div className="flex items-center justify-between w-full">
 				<div className="w-48">
 					<svg
 						clipRule="evenodd"
 						fillRule="evenodd"
-						viewBox="0 0 560 400"
+						viewBox="90 0 560 400"
 						xmlns="http://www.w3.org/2000/svg">
 						<g fill="#004D7F">
 							<path d="m119.217 181.319c-.993-.001-2.295.647-2.893 1.44l-26.023 34.472c-.598.792-.275 1.44.718 1.44h30.223c.993 0 2.295-.648 2.894-1.44l26.047-34.46c.599-.792.276-1.441-.717-1.441l-30.248-.011" />
@@ -46,7 +46,7 @@ function Navbar() {
 					<ul
 						className={`sm:flex px-14 justify-between sm:gap-6 text-sm sm:relative sm:flex-row z-20 ${
 							menuVisible
-								? "flex flex-col absolute inset-x-0 pl-10 gap-4 top-16 w-screen h-1/3 py-10 bg-white"
+								? "flex flex-col items-center absolute inset-x-0 pl-10 gap-4 top-16 w-full py-10 bg-white"
 								: "hidden"
 						} `}>
 						{menu.map((item) => (
@@ -66,7 +66,6 @@ function Navbar() {
 				</div>
 			</div>
 
-			{/* small screen */}
 			<div className="block sm:hidden">
 				<button
 					className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:text-white dark:hover:text-white/75"
