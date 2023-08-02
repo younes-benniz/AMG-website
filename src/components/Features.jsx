@@ -6,7 +6,7 @@ function Features() {
 	return (
 		<section className="container mx-auto py-12 px-5">
 			<h1 className="font-header text-4xl text-center">Purchace your Next AMG easily</h1>
-			<div className="flex-wrap items-center justify-center gap-8 text-center sm:flex">
+			<div className="flex flex-wrap items-center justify-center gap-8 text-center">
 				<div className="w-full px-4 py-4 mt-6 bg-darkCharocoal rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4">
 					<div className="flex-shrink-0">
 						<img src={icon} className="max-w-full w-full h-full" />

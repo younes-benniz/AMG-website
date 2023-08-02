@@ -7,11 +7,13 @@ import NewsCard from "./NewsCard";
 
 function News() {
 	return (
-		<section className="container mx-auto py-10">
+		<section className="container mx-auto py-10 px-4">
 			<h1 className="text-5xl font-header tracking-wide text-black mb-6">News</h1>
-			<div className="flex flex-wrap gap-5 pb-10">
-				<img src={coffe} className="h-auto max-w-full" alt="..." />
-				<div className="flex flex-col">
+			<div className="flex flex-wrap gap-5 pb-10 w-full">
+				<div className="sm:basis-[45%]">
+					<img src={coffe} className="h-auto max-w-full" alt="..." />
+				</div>
+				<div className="flex flex-col sm:basis-2/5">
 					<span className="text-base font-body font-tight mb-3 tracking-wider leading-relaxed">
 						Top News
 					</span>
@@ -26,12 +28,12 @@ function News() {
 					</p>
 					<button
 						href="#"
-						className="px-4 py-2 w-1/4 mr-4 text-white uppercase bg-brightOrange border-2 border-transparent rounded-lg text-md hover:semiboldbg-brightOrange/80">
+						className="px-4 py-2 mr-4 text-white uppercase bg-brightOrange border-2 border-transparent rounded-lg text-md hover:semiboldbg-brightOrange/80">
 						Read more
 					</button>
 				</div>
 			</div>
-			<div className="grid grid-cols-3 gap-4">
+			<div className="grid sm:grid-cols-3 grid-cols-1 gap-4">
 				<NewsCard
 					image={news3}
 					title="Betty Taubes AMG Winter Experience - Bucket List Challenge"

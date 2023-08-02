@@ -21,7 +21,7 @@ function Experience() {
 			slidesToSlide: 2, // optional, default to 1.
 		},
 		mobile: {
-			breakpoint: { max: 464, min: 0 },
+			breakpoint: { max: 464, min: 319 },
 			items: 1,
 			slidesToSlide: 1, // optional, default to 1.
 		},
@@ -55,7 +55,7 @@ function Experience() {
 	];
 
 	return (
-		<section className="realtive container mx-auto py-16">
+		<section className="realtive container mx-auto py-16 px-4">
 			<Divider />
 			<h1 className="text-4xl font-header font-medium mb-8">
 				EXPERIENCE THE FASCINATION OF AMG
@@ -69,14 +69,10 @@ function Experience() {
 				infinite={true}
 				autoPlay={true}
 				autoPlaySpeed={2000}
-				sliderClass="gap-6">
+				itemClass="sm:px-4">
 				{items.map((item, index) => (
-					<div className="w-1-/3" key={index}>
-						<img
-							src={item.image}
-							className="w-full h-auto object-contain rounded-lg mb-4"
-							alt="..."
-						/>
+					<div className="w-full" key={index}>
+						<img src={item.image} className="w-full h-auto rounded-lg mb-4" alt="..." />
 						<h3 className="font-header text-3xl font-normal tracking- leading-relaxed text-center">
 							{item.title}
 						</h3>

@@ -6,8 +6,8 @@ function Vehicle({ image, title, description, imgaePositon }) {
 			className={`flex flex-col overflow-hidden rounded-md shadow-sm ${
 				imgaePositon === "right" ? "lg:flex-row-reverse" : "lg:flex-row"
 			}`}>
-			<img src={image} alt="Sedan" className="" />
-			<div className="flex flex-col justify-center flex-1 p-6">
+			<img src={image} alt="Sedan" className="h-auto max-w-full" />
+			<div className="flex flex-col justify-center flex-1 sm:p-6 py-6">
 				<span className="inline-block text-black font-body text-base font-medium tracking-wider mb-2">
 					Vehciles
 				</span>

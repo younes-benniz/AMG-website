@@ -23,16 +23,15 @@ function BackToTopButton() {
 
 	return (
 		<button
-			id="to-top-button"
 			onClick={scrollToTop}
 			className={`${
 				isVisible ? "fixed" : "hidden"
-			} z-90 bottom-8 right-8 border-0 w-12 h-12 rounded-full drop-shadow-md bg-brightOrange text-white text-3xl font-bold`}>
+			} z-90 bottom-8 sm:right-8 right-4 border-0 w-9 h-9 sm:w-12 sm:h-12 rounded-full drop-shadow-md bg-brightOrange text-white text-3xl font-bold`}>
 			<svg
 				viewBox="0 0 24 24"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
-				className="w-8 h-8 mx-auto">
+				className="w-6 h-6 sm:w-8 sm:h-8 mx-auto">
 				<g id="SVGRepo_bgCarrier" strokeWidth={0} />
 				<g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" />
 				<g id="SVGRepo_iconCarrier">
