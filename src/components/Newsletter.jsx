@@ -1,7 +1,7 @@
 function Newsletter() {
 	return (
-		<section className="container mx-auto py-8 px-4 lg:py-16 lg:px-6 bg-lightSilver">
-			<div className="mx-auto max-w-screen-md text-center">
+		<section className="container mx-auto bg-lightSilver">
+			<div className="mx-auto py-16 px-4 sm:px-0 text-center">
 				<h2 className="font-header mb-4 text-3xl tracking-wider font-medium text-gray-900 sm:text-4xl ">
 					UPDATES FROM AMG
 				</h2>
