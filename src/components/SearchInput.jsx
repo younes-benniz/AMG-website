@@ -1,6 +1,6 @@
 function SearchInput() {
 	return (
-		<div className="relative lg:w-48 w w-36 lg:block hidden">
+		<div className="relative lg:w-48 w-36 xl:block hidden">
 			<label htmlFor="Search" className="sr-only">
 				Search
 			</label>
