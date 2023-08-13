@@ -48,7 +48,9 @@ function Navbar() {
 			className={`w-full flex items-center h-16 lg:left-1/2 lg:w-3/4 lg:-translate-x-2/4 lg:px-8 lg:rounded-full lg:top-2 lg:justify-between gap-2 px-4 bg-white z-50 ${stickyClass}`}>
 			<div className="flex items-center justify-between w-full">
 				<div className="lg:basis-1/6 md:basis-1/4 sm:w-1/3 w-1/2">
-					<img src={Logo} className="w-full h-auto" />
+					<a href="/">
+						<img src={Logo} className="w-full h-auto" />
+					</a>
 				</div>
 				<nav
 					className="lg:block lg:items-center xl:w-[32rem] lg:w-[28rem] lg:pt-1"
