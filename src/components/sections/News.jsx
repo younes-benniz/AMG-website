@@ -7,7 +7,7 @@ import NewsCard from "../NewsCard";
 
 function News() {
 	return (
-		<section className="container mx-auto py-10 px-4">
+		<section id="news" className="container mx-auto py-10 px-4">
 			<h1 className="text-5xl font-header tracking-wide text-black mb-6">News</h1>
 			<div className="flex flex-wrap gap-5 pb-10 w-full">
 				<div className="sm:basis-[45%]">

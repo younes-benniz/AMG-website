@@ -1,6 +1,6 @@
 function Newsletter() {
 	return (
-		<section className="w-full bg-lightSilver">
+		<section id="contact" className="w-full bg-lightSilver">
 			<div className="mx-auto py-16 px-4 sm:px-0 text-center">
 				<h2 className="font-header mb-4 text-3xl tracking-wider font-medium text-gray-900 sm:text-4xl ">
 					UPDATES FROM AMG

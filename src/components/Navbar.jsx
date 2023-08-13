@@ -4,7 +4,13 @@ import piont from "../assets/map-point-search.svg";
 import Logo from "../assets/AMG_logo.svg";
 
 function Navbar() {
-	const menu = ["home", "services", "Vehicles", "FAQ", "contact"];
+	const menu = [
+		{ name: "home", link: "/" },
+		{ name: "features", link: "#features" },
+		{ name: "vehicles", link: "#vehicles" },
+		{ name: "news", link: "#news" },
+		{ name: "contact", link: "#contact" },
+	];
 
 	const [menuVisible, setMenuVisible] = useState(false);
 	const [stickyClass, setStickyClass] = useState("absolute");
@@ -20,6 +26,22 @@ function Navbar() {
 			window.removeEventListener("scroll", stickNavbar);
 		};
 	}, []);
+
+	const scrollToSection = (sectionId) => {
+		if (sectionId === "home") {
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth",
+			});
+		} else {
+			const section = document.getElementById(sectionId);
+			if (section) {
+				const offset = section.offsetTop - 50;
+				console.log("scrolling");
+				window.scrollTo({ top: offset, behavior: "smooth" });
+			}
+		}
+	};
 
 	return (
 		<div
@@ -37,12 +59,12 @@ function Navbar() {
 								? "flex flex-col items-center absolute inset-x-0 pl-10 gap-4 top-16 w-full py-10 bg-white"
 								: "hidden"
 						} `}>
-						{menu.map((item) => (
-							<li key={item}>
+						{menu.map((item, index) => (
+							<li key={index}>
 								<a
-									className="text-black transition font-body text-base tracking-wider font-medium uppercase hover:text-brightOrange group duration-300"
-									href="/">
-									{item}
+									className="text-black transition font-body text-base tracking-wider font-medium uppercase hover:text-brightOrange group duration-300 cursor-pointer"
+									onClick={() => scrollToSection(item.name)}>
+									{item.name}
 									<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-brightOrange"></span>
 								</a>
 							</li>
