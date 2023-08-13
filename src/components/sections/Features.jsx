@@ -1,6 +1,6 @@
-import icon from "../assets/mercedes/cars-icon.png";
-import purchaseIcon from "../assets/mercedes/purchase-icon.png";
-import findDelear from "../assets/mercedes/find-delear-icon.png";
+import icon from "../../assets/cars-icon.png";
+import purchaseIcon from "../../assets/purchase-icon.png";
+import findDelear from "../../assets/find-delear-icon.png";
 
 function Features() {
 	return (

@@ -1,5 +1,5 @@
-import Divider from "./Divider";
-import Logo from "../assets/AMG_logo.svg";
+import Divider from "../Divider";
+import Logo from "../../assets/AMG_logo.svg";
 
 function Footer() {
 	const footerMenu = {

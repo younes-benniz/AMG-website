@@ -1,6 +1,6 @@
-import sedan from "../assets/sedan.jpeg";
-import cla from "../assets/cla.jpeg";
-import Vehicle from "./Vehicle";
+import sedan from "../../assets/sedan.jpeg";
+import cla from "../../assets/cla.jpeg";
+import Vehicle from "../Vehicle";
 
 function Vehicles() {
 	return (

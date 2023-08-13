@@ -1,5 +1,5 @@
-import amgVideo from "../assets/amg.mp4";
-import Divider from "./Divider";
+import amgVideo from "../../assets/amg.mp4";
+import Divider from "../Divider";
 
 function VideoSection() {
 	return (

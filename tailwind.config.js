@@ -16,7 +16,7 @@ export default {
 				darkCharocoal: "#333333", // headings, titles, or important information, providing a strong contrast against lighter backgrounds.
 			},
 			backgroundImage: {
-				"hero-image": "url('/src/assets/test.jpeg')",
+				"hero-image": "url('/src/assets/hero-image.jpeg')",
 			},
 		},
 	},

@@ -1,5 +1,5 @@
-import OverlayedImage from "./OverlayedImage";
-import race from "../assets/race.jpeg";
+import OverlayedImage from "../OverlayedImage";
+import race from "../../assets/race.jpeg";
 
 function Lounge() {
 	return (
