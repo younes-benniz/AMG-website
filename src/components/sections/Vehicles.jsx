@@ -4,7 +4,7 @@ import Vehicle from "../Vehicle";
 
 function Vehicles() {
 	return (
-		<section className="p-4 lg:p-8 text-black">
+		<section id="vehicles" className="p-4 lg:p-8 text-black">
 			<div className="container mx-auto space-y-12">
 				<Vehicle
 					image={sedan}
