@@ -20,13 +20,13 @@ function Hero() {
 					<div className="flex lg:flex-row sm:gap-0 sm:justify-start justify-center sm:items-start items-center md:mt-3 mt-5">
 						<a
 							href="#"
-							className="p-1 lg:px-4 lg:py-2 md:px-2 md:py-1 mr-4 text-white uppercase bg-brightOrange border-2 border-transparent rounded-lg text-sm md:text-base hover:bg-brightOrange/80">
-							Get one
+							className="p-1 lg:px-4 lg:py-2 md:px-2 md:py-1 mr-4 text-white  bg-brightOrange border-2 border-transparent rounded-lg text-sm md:text-base hover:bg-brightOrange/80">
+							Learn More
 						</a>
 						<a
 							href="#"
-							className="p-1 lg:px-4 lg:py-2 md:px-2 md:py-1 text-brightOrange uppercase bg-transparent border-2 border-brightOrange rounded-lg hover:bg-brightOrange hover:text-white text-sm md:text-base">
-							Learn more
+							className="p-1 lg:px-4 lg:py-2 md:px-2 md:py-1 text-brightOrange  bg-transparent border-2 border-brightOrange rounded-lg hover:bg-brightOrange hover:text-white text-sm md:text-base">
+							Find a Dealer
 						</a>
 					</div>
 				</div>

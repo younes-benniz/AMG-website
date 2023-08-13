@@ -29,7 +29,7 @@ function Navbar() {
 					<img src={Logo} className="w-full h-auto" />
 				</div>
 				<nav
-					className="lg:block lg:items-center xl:w-[32rem] lg:w-[28rem]"
+					className="lg:block lg:items-center xl:w-[32rem] lg:w-[28rem] lg:pt-1"
 					aria-label="mainNav">
 					<ul
 						className={`lg:flex xl:px-14 px-7 justify-between lg:gap-2 xl:gap-6 text-sm lg:relative lg:flex-row z-20 ${
@@ -40,9 +40,10 @@ function Navbar() {
 						{menu.map((item) => (
 							<li key={item}>
 								<a
-									className="text-black transition capitalize font-body text-base font-medium"
+									className="text-black transition font-body text-base tracking-wider font-medium uppercase hover:text-brightOrange group duration-300"
 									href="/">
 									{item}
+									<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-brightOrange"></span>
 								</a>
 							</li>
 						))}
@@ -56,21 +57,27 @@ function Navbar() {
 
 			<div className="block lg:hidden">
 				<button
-					className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+					className="rounded p-2 text-gray-600 hover:text-gray-600/75 "
 					onClick={() => setMenuVisible(!menuVisible)}>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						className="h-5 w-5"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-						strokeWidth="2">
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							d="M4 6h16M4 12h16M4 18h16"
-						/>
-					</svg>
+					{menuVisible ? (
+						<svg
+							className="fill-current transition-all duration-300"
+							xmlns="http://www.w3.org/2000/svg"
+							width="32"
+							height="32"
+							viewBox="0 0 512 512">
+							<polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+						</svg>
+					) : (
+						<svg
+							className="fill-current transition-all duration-300"
+							xmlns="http://www.w3.org/2000/svg"
+							width="32"
+							height="32"
+							viewBox="0 0 512 512">
+							<path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+						</svg>
+					)}
 				</button>
 			</div>
 		</div>

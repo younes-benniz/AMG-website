@@ -73,7 +73,7 @@ function Experience() {
 				{items.map((item, index) => (
 					<div className="w-full" key={index}>
 						<img src={item.image} className="w-full h-auto rounded-lg mb-4" alt="..." />
-						<h3 className="font-header text-3xl font-normal tracking- leading-relaxed text-center">
+						<h3 className="font-header text-3xl font-normal tracking-wide leading-relaxed text-center rounded-md shadow-lg h-48 mb-5 bg-lightSilver/10">
 							{item.title}
 						</h3>
 					</div>
