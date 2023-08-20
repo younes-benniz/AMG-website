@@ -27,6 +27,7 @@ function OverlayedImage({ image, title, description, header }) {
 			<div className="relative lg:overflow-hidden p-5 lg:p-0">
 				<img
 					src={image}
+					loading="lazy"
 					alt="lounge"
 					className="max-w-[1020px] w-full text-center h-full mx-auto rounded-lg"
 				/>

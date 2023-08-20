@@ -3,7 +3,12 @@ import PropTypes from "prop-types";
 function NewsCard({ image, title }) {
 	return (
 		<div className="rounded-md shadow-md text-gray-100 ">
-			<img src={image} alt="" className="object-cover w-full rounded-t-md h-auto" />
+			<img
+				src={image}
+				loading="lazy"
+				alt=""
+				className="object-cover w-full rounded-t-md h-auto"
+			/>
 			<div className="flex flex-col p-6 space-y-8">
 				<div className="space-y-2">
 					<h2 className="font-header text-2xl tracking-wide text-center leading-normal font-medium text-black h-20">

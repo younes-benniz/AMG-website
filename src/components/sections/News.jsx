@@ -11,7 +11,7 @@ function News() {
 			<h1 className="text-5xl font-header tracking-wide text-black mb-6">News</h1>
 			<div className="flex flex-wrap gap-5 pb-10 w-full">
 				<div className="sm:basis-[45%]">
-					<img src={coffe} className="h-auto max-w-full" alt="..." />
+					<img src={coffe} loading="lazy" className="h-auto max-w-full" alt="..." />
 				</div>
 				<div className="flex flex-col sm:basis-2/5">
 					<span className="text-base font-body font-tight mb-3 tracking-wider leading-relaxed">
