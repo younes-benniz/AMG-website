@@ -10,13 +10,8 @@ function Hero() {
 					src={heroImage}
 					className="lg:h-screen w-full object-contain object-center lg:object-cover mt-20 lg:mt-0"
 					alt="hero"
-					hash="LXFPHWb^ODxa?^oLjZo}I:r?spX8"
+					hash="eXFPHWb^ODxaWB?^oLjZo}aeI:r?spX8aerXR*Shr=f+xaW;ofofkC"
 				/>
-				{/* <img
-					className=""
-					src={heroImage}
-					loading="lazy"
-				/> */}
 			</div>
 			<div className="relative lg:h-screen flex items-center overflow-hidden bg-transparent lg:pr-16 xl:pl-16 lg:pb-16 px-5 lg:mt-8 mx-auto">
 				<div className="relative flex flex-col backdrop-blur-sm bg-black/70 md:p-4 md:pr-12 xl:p-12 p-10 w-full lg:w-1/2 sm:rounded-br-full rounded-xl">

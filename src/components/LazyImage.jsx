@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Blurhash } from "react-blurhash";
 
-function LazyImage({ src, alt, hash, className }) {
+function LazyImage({ src, alt = "...", hash, className }) {
 	const [imageLoaded, setImageLoaded] = useState(false);
 
 	useEffect(() => {
@@ -16,7 +16,7 @@ function LazyImage({ src, alt, hash, className }) {
 
 	return (
 		<>
-			<div className={imageLoaded ? "hidden" : "inline"}>
+			<div className={`w-full h-auto ${imageLoaded ? "hidden" : "inline animate-pulse"}`}>
 				<Blurhash
 					hash={hash}
 					width="100%"
@@ -28,7 +28,9 @@ function LazyImage({ src, alt, hash, className }) {
 			</div>
 			<img
 				src={src}
-				className={!imageLoaded ? "hidden " : "inline " + className}
+				className={`${
+					imageLoaded ? "opacity-100 " : "opacity-0"
+				} ${className} transition-opacity duration-300`}
 				alt={alt}
 				loading="lazy"
 			/>
