@@ -1,12 +1,13 @@
 import Divider from "./Divider";
 import PropTypes from "prop-types";
-function Vehicle({ image, title, description, imgaePositon }) {
+
+function Vehicle({ children, title, description, imgaePositon }) {
 	return (
 		<div
 			className={`flex flex-col overflow-hidden rounded-md shadow-sm ${
 				imgaePositon === "right" ? "lg:flex-row-reverse" : "lg:flex-row"
 			}`}>
-			<img src={image} alt="Sedan" className="h-auto max-w-full" />
+			<div className="basi1/2">{children}</div>
 			<div className="flex flex-col justify-center flex-1 sm:p-6 py-6">
 				<span className="inline-block text-black font-body text-base font-medium tracking-wider mb-2">
 					Vehciles
@@ -27,7 +28,7 @@ function Vehicle({ image, title, description, imgaePositon }) {
 }
 
 Vehicle.propTypes = {
-	image: PropTypes.string,
+	children: PropTypes.element,
 	title: PropTypes.string,
 	description: PropTypes.string,
 	imgaePositon: PropTypes.oneOf(["right", "left"]).isRequired,

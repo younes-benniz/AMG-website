@@ -1,9 +1,19 @@
 import PropTypes from "prop-types";
 import Divider from "./Divider";
+import LazyImage from "./LazyImage";
 
 function OverlayedImage({ image, title, description, header }) {
 	return (
 		<>
+			<div className="p-5 lg:p-0 max-w-[1020px] h-full text-center mx-auto">
+				<LazyImage
+					src={image}
+					className="w-full h-full rounded-lg"
+					hash="U8E{e3004oE200?wRjRO-CInxu%M^+InInxv"
+					alt="race"
+				/>
+			</div>
+
 			<div className="lg:absolute inset-0 z-10 block w-full lg:w-4/5 mx-auto lg:overflow-hidden p-5 lg:p-0">
 				<div className="absolute hidden lg:block bg-black/70 h-full w-[560px] left-[150px] origin-top transform-gpu lg:-skew-x-[36deg] "></div>
 				<div className="lg:absolute lg:right-0 lg:top-0 lg:left-[120px] w-full lg:w-[350px] z-10 lg:text-white text-black">
@@ -23,13 +33,6 @@ function OverlayedImage({ image, title, description, header }) {
 						Learn more
 					</button>
 				</div>
-			</div>
-			<div className="relative lg:overflow-hidden p-5 lg:p-0">
-				<img
-					src={image}
-					alt="lounge"
-					className="max-w-[1020px] w-full text-center h-full mx-auto rounded-lg"
-				/>
 			</div>
 		</>
 	);

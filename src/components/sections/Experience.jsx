@@ -7,6 +7,7 @@ import image4 from "../../assets/experience/image_4.jpeg";
 import image5 from "../../assets/experience/image_5.jpeg";
 import image6 from "../../assets/experience/image_6.jpeg";
 import Divider from "../Divider";
+import LazyImage from "../LazyImage";
 
 function Experience() {
 	const responsive = {
@@ -31,26 +32,32 @@ function Experience() {
 		{
 			image: image1,
 			title: "Step into the spotlight",
+			hash: "eKF;.|xa1FS|$4vM%MK0W.w_.lt7-Co2R*0xo|];s;S1.SkCiwozWB",
 		},
 		{
 			image: image2,
 			title: "INSIDE AMG - All Episodes",
+			hash: "eGHV6r-;4nWA9F~qRjWBa|t7ozxvxuWX%N.9M{xvogIU9FRjM{jZtR",
 		},
 		{
 			image: image3,
 			title: "Mercedes-AMG SL Behind the Scenes Interview #1: The star is reborn feat. Phoebe L. Thompson",
+			hash: "eIHf9s9Zo#t7IU_Nx]o~kDad9ZNGIURjt7%gM|Rjf6t7Sh%2ayfkof",
 		},
 		{
 			image: image4,
 			title: "Mercedes-AMG SL Behind the Scenes Interview #2: The star is reborn feat. Penélope Guerrero",
+			hash: "ekK^:7^*NFX8RQ~pxus:oza#?vNyVsjuayNdRjn%WBoft8aJoebbn$",
 		},
 		{
 			image: image5,
 			title: "Electrifying Power: Susie Wolff in the Mercedes-AMG EQS 53 4MATIC+",
+			hash: "ewHoqQRPn}WAWC?wRPjrfQWVNIf5kDofj[IUj[oeazflWCj[RjWVWC",
 		},
 		{
 			image: image6,
 			title: "History of Mercedes SL",
+			hash: "eAB3+=~qD%9F9F-n?HNGD*Io4TjEofIUWC%Mt7xuozRP%NRkRj%2t7",
 		},
 	];
 
@@ -71,8 +78,14 @@ function Experience() {
 				autoPlaySpeed={2000}
 				itemClass="sm:px-4">
 				{items.map((item, index) => (
-					<div className="w-full" key={index}>
-						<img src={item.image} className="w-full h-auto rounded-lg mb-4" alt="..." />
+					<div className="w-full h-full" key={index}>
+						<div className="h-56">
+							<LazyImage
+								src={item.image}
+								className="w-full h-auto rounded-lg mb-4"
+								hash={item.hash}
+							/>
+						</div>
 						<h3 className="font-header text-3xl font-normal tracking-wide leading-relaxed text-center rounded-md shadow-lg h-48 mb-5 bg-lightSilver/10">
 							{item.title}
 						</h3>

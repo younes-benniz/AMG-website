@@ -4,7 +4,7 @@ import race from "../../assets/race.jpeg";
 function Lounge() {
 	return (
 		<section className="bg-lightSilver/50 lg:py-4 py-1">
-			<div className="container relative mx-auto lg:my-16">
+			<div className="container h-[550px] relative mx-auto lg:my-16">
 				<OverlayedImage
 					image={race}
 					header="AMG private lounge"

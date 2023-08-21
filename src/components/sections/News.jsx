@@ -4,6 +4,7 @@ import news3 from "../../assets/news_image_3.jpeg";
 import Divider from "../Divider";
 import coffe from "../../assets/coffe.jpeg";
 import NewsCard from "../NewsCard";
+import LazyImage from "../LazyImage";
 
 function News() {
 	return (
@@ -11,7 +12,12 @@ function News() {
 			<h1 className="text-5xl font-header tracking-wide text-black mb-6">News</h1>
 			<div className="flex flex-wrap gap-5 pb-10 w-full">
 				<div className="sm:basis-[45%]">
-					<img src={coffe} className="h-auto max-w-full" alt="..." />
+					{/* <img src={coffe} loading="lazy" alt="..." /> */}
+					<LazyImage
+						src={coffe}
+						className="h-auto max-w-full"
+						hash="U7GIlw00~p-Txatl9FxtI9-;E1t700NG-;_N"
+					/>
 				</div>
 				<div className="flex flex-col sm:basis-2/5">
 					<span className="text-base font-body font-tight mb-3 tracking-wider leading-relaxed">
@@ -34,15 +40,27 @@ function News() {
 				</div>
 			</div>
 			<div className="grid sm:grid-cols-3 grid-cols-1 gap-4">
-				<NewsCard
-					image={news3}
-					title="Betty Taubes AMG Winter Experience - Bucket List Challenge"
-				/>
-				<NewsCard
-					image={news1}
-					title="New Appointments in Top Management at Mercedes-Benz"
-				/>
-				<NewsCard image={news2} title="The new AMG Private Lounge Collection" />
+				<NewsCard title="Betty Taubes AMG Winter Experience - Bucket List Challenge">
+					<LazyImage
+						src={news3}
+						className="object-cover w-full rounded-t-md h-auto"
+						hash="LECj%@^,?w.S#i%fI9I9$oJ#9FH@"
+					/>
+				</NewsCard>
+				<NewsCard title="New Appointments in Top Management at Mercedes-Benz">
+					<LazyImage
+						src={news1}
+						className="object-cover w-full rounded-t-md h-auto"
+						hash="U25ONf004n~qkCxa4n-;WBRj-;WB00xu~q4n"
+					/>
+				</NewsCard>
+				<NewsCard title="The new AMG Private Lounge Collection">
+					<LazyImage
+						src={news2}
+						className="object-cover w-full rounded-t-md h-auto"
+						hash="UECj%@^,?w.S#i%fI9I9$oJ#9FH@ko%4xaac"
+					/>
+				</NewsCard>
 			</div>
 		</section>
 	);
