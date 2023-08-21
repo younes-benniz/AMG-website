@@ -1,6 +1,5 @@
 import amgVideo from "../../assets/amg.mp4";
 import Divider from "../Divider";
-import videoPoster from "../../assets/video-poster.png";
 
 function VideoSection() {
 	return (
@@ -34,7 +33,6 @@ function VideoSection() {
 				<div className="aspect-video sm:w-2/3">
 					<video
 						className="w-full h-full rounded-lg"
-						poster={videoPoster}
 						preload="metadata"
 						autoPlay
 						loop
