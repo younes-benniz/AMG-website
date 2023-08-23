@@ -12,9 +12,9 @@ function News() {
 			<h1 className="text-5xl font-header tracking-wide text-black mb-6">News</h1>
 			<div className="flex flex-wrap gap-5 pb-10 w-full">
 				<div className="sm:basis-[45%]">
-					{/* <img src={coffe} loading="lazy" alt="..." /> */}
 					<LazyImage
 						src={coffe}
+						alt="coffe-machine"
 						className="h-auto max-w-full"
 						hash="U7GIlw00~p-Txatl9FxtI9-;E1t700NG-;_N"
 					/>
@@ -43,6 +43,7 @@ function News() {
 				<NewsCard title="Betty Taubes AMG Winter Experience - Bucket List Challenge">
 					<LazyImage
 						src={news3}
+						alt="Girl-with-mercedes"
 						className="object-cover w-full rounded-t-md h-auto"
 						hash="LECj%@^,?w.S#i%fI9I9$oJ#9FH@"
 					/>
@@ -50,6 +51,7 @@ function News() {
 				<NewsCard title="New Appointments in Top Management at Mercedes-Benz">
 					<LazyImage
 						src={news1}
+						alt="car-brand"
 						className="object-cover w-full rounded-t-md h-auto"
 						hash="U25ONf004n~qkCxa4n-;WBRj-;WB00xu~q4n"
 					/>
@@ -57,6 +59,7 @@ function News() {
 				<NewsCard title="The new AMG Private Lounge Collection">
 					<LazyImage
 						src={news2}
+						alt="boy-and-girl"
 						className="object-cover w-full rounded-t-md h-auto"
 						hash="UECj%@^,?w.S#i%fI9I9$oJ#9FH@ko%4xaac"
 					/>
