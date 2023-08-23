@@ -9,7 +9,7 @@ function Hero() {
 				<LazyImage
 					src={heroImage}
 					className="lg:h-screen w-full object-contain object-center lg:object-cover mt-20 lg:mt-0"
-					alt="hero"
+					alt="Orange-AMG"
 					hash="eXFPHWb^ODxaWB?^oLjZo}aeI:r?spX8aerXR*Shr=f+xaW;ofofkC"
 				/>
 			</div>

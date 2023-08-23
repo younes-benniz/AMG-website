@@ -12,7 +12,7 @@ function Footer() {
 				<div className="basis-1/3 mx-auto">
 					<div className="w-64">
 						<a rel="noopener noreferrer" href="#">
-							<img src={Logo} className="w-full h-auto" />
+							<img src={Logo} alt="AMG-logo" className="w-full h-auto" />
 						</a>
 					</div>
 				</div>

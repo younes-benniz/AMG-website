@@ -49,7 +49,7 @@ function Navbar() {
 			<div className="flex items-center justify-between w-full">
 				<div className="lg:basis-1/6 md:basis-1/4 sm:w-1/3 w-1/2">
 					<a href="/">
-						<img src={Logo} className="w-full h-auto" />
+						<img src={Logo} alt="AMG-Logo" className="w-full h-auto" />
 					</a>
 				</div>
 				<nav
@@ -65,7 +65,8 @@ function Navbar() {
 							<li key={index}>
 								<a
 									className="text-black transition font-body text-base tracking-wider font-medium uppercase hover:text-brightOrange group duration-300 cursor-pointer"
-									onClick={() => scrollToSection(item.name)}>
+									onClick={() => scrollToSection(item.name)}
+									href="javascript:void(0)">
 									{item.name}
 									<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-brightOrange"></span>
 								</a>
