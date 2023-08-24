@@ -1,7 +1,15 @@
-import amgVideo from "../../assets/amg.mp4";
+import { useState } from "react";
+import amgVideo from "../../assets/amg_teaser.mp4";
 import Divider from "../Divider";
+import videoPoster from "../../assets/video-poster-small.jpeg";
 
 function VideoSection() {
+	const [isReady, setIsReady] = useState(false);
+
+	const handleLoadedData = () => {
+		setIsReady(true);
+	};
+
 	return (
 		<section className="container py-20 px-2 mx-auto">
 			<div className="sm:px-5">
@@ -31,12 +39,21 @@ function VideoSection() {
 					</div>
 				</div>
 				<div className="aspect-video sm:w-2/3">
+					<div className={`w-full h-full animate-pulse ${isReady ? "hidden" : "block"}`}>
+						<img
+							className="w-full h-full object-cover object-center rounded-lg"
+							src={videoPoster}
+						/>
+					</div>
 					<video
-						className="w-full h-full rounded-lg"
+						className={`w-full h-full rounded-lg ${
+							!isReady ? "opacity-0" : "opacity-100"
+						} transition-opacity duration-200`}
 						preload="metadata"
 						autoPlay
 						loop
-						muted>
+						muted
+						onLoadedData={handleLoadedData}>
 						<source src={amgVideo} type="video/mp4" />
 					</video>
 				</div>
