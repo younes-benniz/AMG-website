@@ -85,17 +85,19 @@ function Experience() {
 				itemClass="sm:px-4">
 				{items.map((item, index) => (
 					<div className="w-full h-full" key={index}>
-						<div className="h-56">
+						<div className="w-full h-52">
 							<LazyImage
 								src={item.image}
 								alt={item.alt}
-								className="w-full h-auto rounded-lg mb-4"
+								className="w-full h-full rounded-lg"
 								hash={item.hash}
 							/>
 						</div>
-						<h3 className="font-header text-3xl font-normal tracking-wide leading-relaxed text-center rounded-md shadow-lg h-48 mb-5 bg-lightSilver/10">
-							{item.title}
-						</h3>
+						<div className="pt-4 lg:px-5 rounded-md shadow-xl h-52 mb-5 bg-lightSilver/50">
+							<h3 className="font-header text-3xl font-normal tracking-wide leading-relaxed text-center ">
+								{item.title}
+							</h3>
+						</div>
 					</div>
 				))}
 			</Carousel>

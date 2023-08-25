@@ -39,12 +39,12 @@ function News() {
 					</button>
 				</div>
 			</div>
-			<div className="grid sm:grid-cols-3 grid-cols-1 gap-4">
+			<div className="grid sm:grid-cols-3 grid-cols-1 gap-10 lg:gap-4">
 				<NewsCard title="Betty Taubes AMG Winter Experience - Bucket List Challenge">
 					<LazyImage
 						src={news3}
 						alt="Girl-with-mercedes"
-						className="object-cover w-full rounded-t-md h-auto"
+						className="object-cover w-full rounded-t-md h-full"
 						hash="LECj%@^,?w.S#i%fI9I9$oJ#9FH@"
 					/>
 				</NewsCard>
@@ -52,7 +52,7 @@ function News() {
 					<LazyImage
 						src={news1}
 						alt="car-brand"
-						className="object-cover w-full rounded-t-md h-auto"
+						className="object-cover w-full rounded-t-md h-full"
 						hash="U25ONf004n~qkCxa4n-;WBRj-;WB00xu~q4n"
 					/>
 				</NewsCard>
@@ -60,7 +60,7 @@ function News() {
 					<LazyImage
 						src={news2}
 						alt="boy-and-girl"
-						className="object-cover w-full rounded-t-md h-auto"
+						className="object-cover w-full rounded-t-md h-full"
 						hash="UECj%@^,?w.S#i%fI9I9$oJ#9FH@ko%4xaac"
 					/>
 				</NewsCard>
