@@ -89,11 +89,11 @@ function Experience() {
 							<LazyImage
 								src={item.image}
 								alt={item.alt}
-								className="w-full h-full rounded-lg"
+								className="w-full h-full rounded-t-lg"
 								hash={item.hash}
 							/>
 						</div>
-						<div className="pt-4 lg:px-5 rounded-md shadow-xl h-52 mb-5 bg-lightSilver/50">
+						<div className="pt-4 lg:px-5 rounded-b-lg w-full h-60 bg-lightSilver/50">
 							<h3 className="font-header text-3xl font-normal tracking-wide leading-relaxed text-center ">
 								{item.title}
 							</h3>
