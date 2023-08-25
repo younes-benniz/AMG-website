@@ -1,0 +1,59 @@
+name: build and Deploy AMG website to GitHub Pages
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+    workflow_dispatch:
+
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+
+concurrency:
+    group: "pages"
+    cancel-in-progress: false
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repositories
+              uses: actions/checkout@v3
+            - name: setup Node
+              uses: actions/setup-node@v2.5.2
+            - name: install dependencies with yarn
+              run: yarn
+            - name: run linter
+              run: yarn lint
+            - name: build the application
+              run: yarn build
+            - name: Upload build folder
+              uses: actions/upload-artifact@v3
+              with:
+                  name: build-artifacts
+                  path: ./dist
+    deploy:
+        needs: build
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        runs-on: ubuntu-latest
+        steps:
+            - name: Download build folder
+              uses: actions/download-artifact@v3
+              with:
+                  name: build-artifacts
+            - name: Setup Pages
+              uses: actions/configure-pages@v3
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v1
+              with:
+                  path: .
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v2
