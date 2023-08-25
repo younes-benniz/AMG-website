@@ -35,7 +35,7 @@ jobs:
             - name: Upload build folder
               uses: actions/upload-artifact@v3
               with:
-                  name: build
+                  name: build-artifacts
                   path: ./dist
     deploy:
         needs: build
@@ -47,13 +47,15 @@ jobs:
             - name: Download build folder
               uses: actions/download-artifact@v3
               with:
-                  name: build
+                  name: build-artifacts
+            - name: ls directory
+              run: ls
             - name: Setup Pages
               uses: actions/configure-pages@v3
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v1
               with:
-                  path: "./dist"
+                  path: ./dist
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v2
