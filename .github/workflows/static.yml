@@ -1,4 +1,4 @@
-name: Deploy AMG website to GitHub Pages
+name: build and Deploy AMG website to GitHub Pages
 
 on:
     push:
@@ -19,7 +19,33 @@ concurrency:
     cancel-in-progress: false
 
 jobs:
+    install:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: Setup Node
+              uses: actions/setup-node@v2.5.2
+            - name: install dependencies
+              run: yarn
+    lint:
+        needs: install
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: run linter
+              run: yarn lint
+    build:
+        needs: [install, lint]
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: build the application
+              run: yarn build
     deploy:
+        needs: build
         environment:
             name: github-pages
             url: ${{ steps.deployment.outputs.page_url }}
@@ -27,12 +53,6 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v3
-            - name: Setup Node
-              uses: actions/setup-node@v2.5.2
-            - name: yarn install and build
-              run: |
-                  yarn
-                  yarn build
             - name: Setup Pages
               uses: actions/configure-pages@v3
             - name: Upload artifact
