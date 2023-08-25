@@ -17,7 +17,7 @@ function OverlayedImage({ image, title, description, header }) {
 			<div className="lg:absolute inset-0 z-10 block w-full lg:w-4/5 mx-auto lg:overflow-hidden p-5 lg:p-0">
 				<div className="absolute hidden lg:block bg-black/70 h-full w-[560px] left-[150px] origin-top transform-gpu lg:-skew-x-[36deg] "></div>
 				<div className="lg:absolute lg:right-0 lg:top-0 lg:left-[120px] w-full lg:w-[350px] z-10 lg:text-white text-black">
-					<h4 className=" mt-14 text-base font-body mb-5 font-medium tracking-wider">
+					<h4 className="lg:mt-14 text-base font-body mb-5 font-medium tracking-wider">
 						{header}
 					</h4>
 					<Divider />
