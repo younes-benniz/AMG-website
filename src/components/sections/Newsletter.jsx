@@ -1,17 +1,34 @@
+import { motion } from "framer-motion";
+
 function Newsletter() {
 	return (
 		<section id="contact" className="w-full bg-lightSilver">
 			<div className="mx-auto py-16 px-4 sm:px-0 text-center">
-				<h2 className="font-header mb-4 text-3xl tracking-wider font-medium text-gray-900 sm:text-4xl ">
+				<motion.h2
+					className="font-header mb-4 text-3xl tracking-wider font-medium text-gray-900 sm:text-4xl"
+					initial={{ opacity: 0, y: 100 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ delay: 0.4 }}>
 					UPDATES FROM AMG
-				</h2>
-				<p className="font-body mx-auto max-w-2xl font-light text-gray-900 mb-8 sm:text-xl ">
+				</motion.h2>
+				<motion.p
+					className="font-body mx-auto max-w-2xl font-light text-gray-900 mb-8 sm:text-xl"
+					initial={{ opacity: 0, y: 100 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ delay: 0.5 }}>
 					Unleash the speed and luxury of AMG with our Accelerate Newsletter - your
 					ultimate source for high-performance automotive updates and insider exclusives.
-				</p>
+				</motion.p>
 				<form action="#">
 					<div className="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
-						<div className="relative w-full">
+						<motion.div
+							className="relative w-full"
+							initial={{ opacity: 0, y: 100 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ delay: 0.6 }}>
 							<label
 								htmlFor="email"
 								className="hidden mb-2 text-sm font-medium text-gray-900">
@@ -34,7 +51,7 @@ function Newsletter() {
 								id="email"
 								required={true}
 							/>
-						</div>
+						</motion.div>
 						<div>
 							<button
 								type="submit"
@@ -43,7 +60,12 @@ function Newsletter() {
 							</button>
 						</div>
 					</div>
-					<div className="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer font-body sm:pl-4">
+					<motion.div
+						className="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer font-body sm:pl-4"
+						initial={{ opacity: 0, y: 100 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ delay: 0.8 }}>
 						We care about the protection of your data.
 						<a
 							href="#"
@@ -51,7 +73,7 @@ function Newsletter() {
 							Read our Privacy Policy
 						</a>
 						.
-					</div>
+					</motion.div>
 				</form>
 			</div>
 		</section>

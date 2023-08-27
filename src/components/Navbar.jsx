@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import SearchInput from "./SearchInput";
 import piont from "../assets/map-point-search.svg";
 import Logo from "../assets/AMG_logo.svg";
+import { motion } from "framer-motion";
 
 function Navbar() {
 	const menu = [
@@ -44,8 +45,11 @@ function Navbar() {
 	};
 
 	return (
-		<div
-			className={`w-full flex items-center h-16 lg:left-1/2 lg:w-3/4 lg:-translate-x-2/4 lg:px-8 lg:rounded-full lg:top-2 lg:justify-between gap-2 px-4 bg-white z-50 ${stickyClass}`}>
+		<motion.div
+			className={`w-full flex items-center h-16 lg:left-[15%] lg:w-3/4  lg:px-8 lg:rounded-full lg:top-2 lg:justify-between gap-2 px-4 bg-white z-50 ${stickyClass}`}
+			initial={{ opacity: 0, top: -100 }}
+			animate={{ opacity: 1, top: 8 }}
+			transition={{ duration: 1 }}>
 			<div className="flex items-center justify-between w-full">
 				<div className="lg:basis-1/6 md:basis-1/4 sm:w-1/3 w-1/2">
 					<a href="/">
@@ -65,8 +69,7 @@ function Navbar() {
 							<li key={index}>
 								<a
 									className="text-black transition font-body text-base tracking-wider font-medium uppercase hover:text-brightOrange group duration-300 cursor-pointer"
-									onClick={() => scrollToSection(item.name)}
-									href="javascript:void(0)">
+									onClick={() => scrollToSection(item.name)}>
 									{item.name}
 									<span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-brightOrange"></span>
 								</a>
@@ -105,7 +108,7 @@ function Navbar() {
 					)}
 				</button>
 			</div>
-		</div>
+		</motion.div>
 	);
 }
 

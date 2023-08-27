@@ -1,14 +1,20 @@
 import Divider from "./Divider";
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
-function Vehicle({ children, title, description, imgaePositon }) {
+function Vehicle({ children, title, description, imagePositon }) {
 	return (
 		<div
 			className={`flex flex-col overflow-hidden rounded-md shadow-sm ${
-				imgaePositon === "right" ? "lg:flex-row-reverse" : "lg:flex-row"
+				imagePositon === "right" ? "lg:flex-row-reverse" : "lg:flex-row"
 			}`}>
 			<div className="basi1/2">{children}</div>
-			<div className="flex flex-col justify-center flex-1 sm:p-6 py-6">
+			<motion.div
+				className="flex flex-col justify-center flex-1 sm:p-6 py-6"
+				initial={imagePositon == "right" ? { x: -500 } : { x: 500 }}
+				whileInView={{ x: 0 }}
+				viewport={{ once: true }}
+				transition={{ delay: 0.5, type: "spring", stiffness: 200 }}>
 				<span className="inline-block text-black font-body text-base font-medium tracking-wider mb-2">
 					Vehciles
 				</span>
@@ -22,7 +28,7 @@ function Vehicle({ children, title, description, imgaePositon }) {
 					className="self-start px-4 py-2 mr-4 text-white bg-brightOrange border-2 border-transparent rounded-lg text-md hover:bg-brightOrange/80">
 					Go to vehicle
 				</button>
-			</div>
+			</motion.div>
 		</div>
 	);
 }
@@ -31,7 +37,7 @@ Vehicle.propTypes = {
 	children: PropTypes.element,
 	title: PropTypes.string,
 	description: PropTypes.string,
-	imgaePositon: PropTypes.oneOf(["right", "left"]).isRequired,
+	imagePositon: PropTypes.oneOf(["right", "left"]).isRequired,
 };
 
 export default Vehicle;

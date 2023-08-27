@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Blurhash } from "react-blurhash";
+import { motion } from "framer-motion";
 
-function LazyImage({ src, alt = "...", hash, className }) {
+const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
+const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
+
+function LazyImage({ src, alt = "...", hash, className, animate = true }) {
 	const [imageLoaded, setImageLoaded] = useState(false);
+	const [isInView, setIsInView] = useState(false);
 
 	useEffect(() => {
 		const img = new Image();
@@ -26,14 +31,22 @@ function LazyImage({ src, alt = "...", hash, className }) {
 					punch={1}
 				/>
 			</div>
-			<img
-				src={src}
-				className={`${
-					imageLoaded ? "opacity-100 " : "opacity-0"
-				} ${className} transition-opacity duration-300`}
-				alt={alt}
-				loading="lazy"
-			/>
+			{animate ? (
+				<motion.div
+					initial={false}
+					animate={
+						imageLoaded && isInView
+							? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
+							: { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
+					}
+					transition={{ duration: 1, delay: 1 }}
+					viewport={{ once: true }}
+					onViewportEnter={() => setIsInView(true)}>
+					<img src={src} className={className} alt={alt} loading="lazy" />
+				</motion.div>
+			) : (
+				<img src={src} className={className} alt={alt} loading="lazy" />
+			)}
 		</>
 	);
 }
@@ -43,6 +56,7 @@ LazyImage.propTypes = {
 	alt: PropTypes.string,
 	hash: PropTypes.string,
 	className: PropTypes.string,
+	animate: PropTypes.bool,
 };
 
 export default LazyImage;

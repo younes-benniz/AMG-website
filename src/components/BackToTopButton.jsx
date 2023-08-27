@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 function BackToTopButton() {
 	const [isVisible, setIsVisible] = useState(false);
@@ -22,11 +23,13 @@ function BackToTopButton() {
 	}, []);
 
 	return (
-		<button
+		<motion.button
 			onClick={scrollToTop}
 			className={`${
 				isVisible ? "fixed" : "hidden"
-			} z-90 bottom-8 sm:right-8 right-4 border-0 w-9 h-9 sm:w-12 sm:h-12 rounded-full drop-shadow-md bg-brightOrange text-white text-3xl font-bold`}>
+			} z-90 bottom-8 sm:right-8 right-4 border-0 w-9 h-9 sm:w-12 sm:h-12 rounded-full drop-shadow-md bg-brightOrange text-white text-3xl font-bold`}
+			whileHover={{ scale: 1.2 }}
+			transition={{ type: "spring", stiffness: 500 }}>
 			<svg
 				viewBox="0 0 24 24"
 				fill="none"
@@ -48,7 +51,7 @@ function BackToTopButton() {
 					/>
 				</g>
 			</svg>
-		</button>
+		</motion.button>
 	);
 }
 

@@ -64,7 +64,7 @@ function Footer() {
 								rel="noopener noreferrer"
 								href="#"
 								title="Facebook"
-								className="flex items-center p-1 hover:scale-110 ease-in-out duration-200">
+								className="flex items-center p-1 hover:scale-125 sca transition-transform ease-in-out duration-200">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									fill="currentColor"
@@ -77,7 +77,7 @@ function Footer() {
 								rel="noopener noreferrer"
 								href="#"
 								title="Twitter"
-								className="flex items-center p-1 hover:scale-110 ease-in-out duration-200">
+								className="flex items-center p-1 hover:scale-125 ease-in-out duration-200">
 								<svg
 									viewBox="0 0 24 24"
 									xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@ function Footer() {
 								rel="noopener noreferrer"
 								href="#"
 								title="Instagram"
-								className="flex items-center p-1 hover:scale-110 ease-in-out duration-200">
+								className="flex items-center p-1 hover:scale-125 ease-in-out duration-200">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 32 32"
