@@ -11,8 +11,8 @@ function Vehicle({ children, title, description, imagePositon }) {
 			<div className="basi1/2">{children}</div>
 			<motion.div
 				className="flex flex-col justify-center flex-1 sm:p-6 py-6"
-				initial={imagePositon == "right" ? { x: -500 } : { x: 500 }}
-				whileInView={{ x: 0 }}
+				initial={imagePositon == "right" ? { opacity: 0, x: -100 } : { opacity: 0, x: 100 }}
+				whileInView={{ opacity: 1, x: 0 }}
 				viewport={{ once: true }}
 				transition={{ delay: 0.5, type: "spring", stiffness: 200 }}>
 				<span className="inline-block text-black font-body text-base font-medium tracking-wider mb-2">

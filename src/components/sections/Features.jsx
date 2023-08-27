@@ -24,14 +24,26 @@ function Features() {
 	return (
 		<section id="features" className="container mx-auto py-12 px-5">
 			<h1 className="font-header text-4xl text-center">Purchace your Next AMG easily</h1>
-			<div className="flex flex-wrap items-center justify-center gap-8 text-center">
+			<div className="flex flex-wrap items-center justify-center gap-8 text-center overflow-hidden">
 				{features.map((feature, index) => (
 					<motion.div
 						key={index}
 						className="w-full px-4 py-4 mt-6 bg-darkCharocoal rounded-lg shadow-lg sm:w-1/2 md:w-1/2 lg:w-1/4 sm:even:mt-16 md:even:mt-20 lg:even:mt-24"
 						whileHover={{ scale: 1.1 }}
-						initial={index == 0 ? { x: -150 } : index == 1 ? { y: 100 } : { x: 150 }}
-						whileInView={index == 0 ? { x: 0 } : index == 1 ? { y: 0 } : { x: 0 }}
+						initial={
+							index == 0
+								? { opacity: 0, x: -150 }
+								: index == 1
+								? { opacity: 0, y: 100 }
+								: { opacity: 0, x: 150 }
+						}
+						whileInView={
+							index == 0
+								? { opacity: 1, x: 0 }
+								: index == 1
+								? { opacity: 1, y: 0 }
+								: { opacity: 1, x: 0 }
+						}
 						viewport={{ once: true }}
 						transition={{ duration: 0.5 }}>
 						<div className="flex-shrink-0">
