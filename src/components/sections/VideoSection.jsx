@@ -20,15 +20,15 @@ function VideoSection() {
 			<div className="sm:px-5">
 				<motion.h4
 					className="inline-block text-black font-body text-base font-medium tracking-wider mb-3"
-					initial={{ x: -120 }}
-					whileInView={{ x: 0 }}
+					initial={{ opacity: 0, x: -100 }}
+					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ delay: 0.1, type: "spring", stiffness: 200 }}
 					viewport={{ once: true }}>
 					Exclusive New vehicle
 				</motion.h4>
 				<motion.div
-					initial={{ x: -420 }}
-					whileInView={{ x: 0 }}
+					initial={{ opacity: 0, x: -100 }}
+					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
 					viewport={{ once: true }}>
 					<Divider />
@@ -40,16 +40,16 @@ function VideoSection() {
 					<div className="px-5 flex flex-col gap-4">
 						<motion.h1
 							className="text-black font-header text-3xl uppercase text-center sm:text-left"
-							initial={{ x: -420 }}
-							whileInView={{ x: 0 }}
+							initial={{ opacity: 0, x: -100 }}
+							whileInView={{ opacity: 1, x: 0 }}
 							transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
 							viewport={{ once: true }}>
 							the new Mercedes-AMG GLC SUV
 						</motion.h1>
 						<motion.p
 							className="font-body text-base tracking-wider leading-relaxed text-black text-center sm:text-left"
-							initial={{ x: -420 }}
-							whileInView={{ x: 0 }}
+							initial={{ opacity: 0, x: -100 }}
+							whileInView={{ opacity: 1, x: 0 }}
 							transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
 							viewport={{ once: true }}>
 							Everything, except compromises: in an exclusive, digital Private Lounge
@@ -60,8 +60,8 @@ function VideoSection() {
 						<motion.button
 							href="#"
 							className="px-4 py-2 mr-4 text-white uppercase bg-brightOrange border-2 border-transparent rounded-lg text-md hover:bg-brightOrange/80"
-							initial={{ x: -420 }}
-							whileInView={{ x: 0 }}
+							initial={{ opacity: 0, x: -100 }}
+							whileInView={{ opacity: 1, x: 0 }}
 							transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
 							viewport={{ once: true }}>
 							Get one
