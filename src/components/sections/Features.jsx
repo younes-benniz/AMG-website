@@ -25,6 +25,7 @@ function Features() {
 		<section id="features" className="container mx-auto py-12 px-5">
 			<h1 className="font-header text-4xl text-center">Purchace your Next AMG easily</h1>
 			<div className="flex flex-wrap items-center justify-center gap-8 text-center overflow-hidden">
+
 				{features.map((feature, index) => (
 					<motion.div
 						key={index}
