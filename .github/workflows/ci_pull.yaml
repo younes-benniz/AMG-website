@@ -1,0 +1,25 @@
+name: Test if app builds successfully on pull_requests
+
+on:
+    pull_request:
+    workflow_dispatch:
+
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repositories
+              uses: actions/checkout@v3
+            - name: setup Node
+              uses: actions/setup-node@v2.5.2
+            - name: install dependencies with yarn
+              run: yarn
+            - name: run linter
+              run: yarn lint
+            - name: build the application
+              run: yarn build
