@@ -13,22 +13,22 @@ function Vehicles() {
 							E-PERFORMANCE is the uncompromising combination of power, luxury,
 							efficiency and pioneering technology. For pure emotions. And the pure
 							AMG experience."
-					imgaePositon="left">
+					imagePositon="left">
 					<LazyImage
 						src={sedan}
 						alt="sedan"
-						className="h-auto max-w-full"
+						className="h-auto max-w-full rounded-lg"
 						hash="UJEl,N67#SW;|ao0WUf5EL$jXSoLACr?s:oL"
 					/>
 				</Vehicle>
 				<Vehicle
 					title="The Mercedes-AMG CLA Coupé"
 					description="As luxurious as it is sporty, as exciting as it is emotional: With its sharpened profile, the new Mercedes-AMG CLA Coupé embodies enormous driving pleasure and high-performance spirit. This makes it the ideal newcomer to the world of AMG."
-					imgaePositon="right">
+					imagePositon="right">
 					<LazyImage
 						src={cla}
 						alt="cla"
-						className="h-auto max-w-full"
+						className="h-auto max-w-full rounded-lg"
 						hash="U15XrzFq4T1g00W;_Nnh00w69t}s=}S}wJEK"
 					/>
 				</Vehicle>

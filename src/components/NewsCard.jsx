@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function NewsCard({ children, title }) {
 	return (
-		<div className="rounded-md text-gray-100 ">
+		<div className="rounded-md text-gray-100">
 			<div className="h-56">{children}</div>
 			<div className="bg-lightSilver/50 shadow-xl">
 				<div className="flex flex-col p-6 space-y-8">

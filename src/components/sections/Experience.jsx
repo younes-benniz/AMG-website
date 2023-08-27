@@ -91,6 +91,7 @@ function Experience() {
 								alt={item.alt}
 								className="w-full h-full rounded-t-lg"
 								hash={item.hash}
+								animate={false}
 							/>
 						</div>
 						<div className="pt-4 lg:px-5 rounded-b-lg w-full h-60 bg-lightSilver/50">

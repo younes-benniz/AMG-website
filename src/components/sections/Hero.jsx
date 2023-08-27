@@ -11,14 +11,18 @@ function Hero() {
 					className="lg:h-screen w-full object-contain object-center lg:object-cover mt-20 lg:mt-0"
 					alt="Orange-AMG"
 					hash="eXFPHWb^ODxaWB?^oLjZo}aeI:r?spX8aerXR*Shr=f+xaW;ofofkC"
+					animate={false}
 				/>
 			</div>
-			<div className="relative lg:h-screen flex items-center overflow-hidden bg-transparent lg:pr-16 xl:pl-16 lg:pb-16 px-5 lg:mt-8 mx-auto">
+			<motion.div
+				className="relative lg:h-screen flex items-center overflow-hidden bg-transparent lg:pr-16 xl:pl-16 lg:pb-16 px-5 lg:mt-8 mx-auto"
+				initial={{ opacity: 0, left: -100 }}
+				animate={{ opacity: 1, left: 0 }}
+				transition={{ duration: 1, delay: 1 }}>
 				<div className="relative flex flex-col backdrop-blur-sm bg-black/70 md:p-4 md:pr-12 xl:p-12 p-10 w-full lg:w-1/2 sm:rounded-br-full rounded-xl">
 					<motion.h1
 						initial={{ opacity: 0, y: -20 }}
 						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 1 }}
 						className="text-2xl tracking-wider md:text-2xl font-black leading-none text-white uppercase font-header xl:text-5xl pb-4 sm:text-left text-center">
 						Unleash Adrenaline
 						{/* Uncover the Intensity of AMG Performance */}
@@ -40,7 +44,7 @@ function Hero() {
 						</a>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</section>
 	);
 }
